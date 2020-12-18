@@ -1,0 +1,25 @@
+<div class="card my-5">
+    <h1 style="text-align: center">Resume Educations</h1>
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th style="width: 70%">Name</th>
+                    <th style="width: 70%">Description</th>
+                    <th style="width: 15%">Edit</th>
+                    <th style="width: 15%">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let education of educations">
+                    <td>{{ education.name }}</td>
+                    <td>{{ education.description }}</td>
+                    <td><button style="display: block;margin: auto;" (click)="editEducation(this.education.educationId)" class="btn btn-warning">Edit</button></td>
+                    <td><button style="display: block;margin: auto;" (click)="deleteEducation(this.education.educationId)" class="btn btn-danger">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <button style="display: block;margin: auto;" (click)="addEducation()" class="btn btn-info">Add Education</button>
+
+    </div>
+</div>

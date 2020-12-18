@@ -1,0 +1,19 @@
+<div class="card my-5">
+    <h1 style="text-align: center">Account Educations</h1>
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let education of educations">
+                    <td>{{ education.name }}</td>
+                    <td>{{ education.description }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
